@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&family=Noto+Serif+TC:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #F8F7F4;
+    --foreground: #1A1A1A;
+    --card: #FFFFFF;
+    --card-foreground: #1A1A1A;
+    --border: #E0E0DC;
+    --input: #E0E0DC;
+    --ring: #1B4332;
+    --muted: #F0EFEB;
+    --muted-foreground: #6B7280;
+    --primary: #1B4332;
+    --primary-foreground: #FFFFFF;
+    --secondary: #40916C;
+    --secondary-foreground: #FFFFFF;
+    --accent: #74C69D;
+    --accent-foreground: #1A1A1A;
+    --destructive: #DC2626;
+    --destructive-foreground: #FFFFFF;
+    --radius: 4px;
+  }
+
+  * {
+    @apply border-border;
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Noto Sans TC', sans-serif;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Noto Serif TC', serif;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  .kpi-card {
+    @apply bg-white border border-border rounded p-6;
+  }
+
+  .kpi-value {
+    font-family: 'JetBrains Mono', monospace;
+    @apply text-3xl font-medium text-[#1B4332];
+  }
+
+  .section-title {
+    font-family: 'Noto Serif TC', serif;
+    @apply text-xl font-semibold text-[#1A1A1A] mb-4;
+  }
+
+  .data-cell {
+    font-family: 'JetBrains Mono', monospace;
+    @apply text-right tabular-nums;
+  }
+
+  .calc-box {
+    @apply bg-[#F8F7F4] border border-[#E0E0DC] rounded p-4 text-sm;
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F8F7F4;
+}
+::-webkit-scrollbar-thumb {
+  background: #E0E0DC;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #40916C;
+}
